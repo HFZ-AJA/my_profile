@@ -1,0 +1,24 @@
+/*
+  App.css: disederhanakan & dirapikan.
+  Portfolio saat ini menggunakan Tailwind (utility classes), jadi file ini hanya menyimpan
+  style minimal yang relevan dengan markup tertentu.
+*/
+
+/* legacy (tidak dipakai di halaman portfolio saat ini) */
+.counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+}
+
+/* Agar iframe PDF tidak punya border default */
+iframe {
+  border: 0;
+  background: transparent;
+}
+

@@ -1,0 +1,422 @@
+export default function PortfolioWebsite() {
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans">
+      {/* Navbar */}
+      <nav className="bg-white/60 backdrop-blur border-b border-slate-200/70 sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+          <a href="#about" className="inline-flex items-center gap-2 group" style={{ scrollMarginTop: 80 }}>
+            <span className="h-9 w-9 rounded-xl bg-gradient-to-br from-indigo-600 to-blue-600 shadow-sm flex items-center justify-center text-white font-bold">
+              M
+            </span>
+            <span className="text-xl md:text-2xl font-bold tracking-tight group-hover:opacity-90 transition">
+              My Portfolio
+            </span>
+          </a>
+
+          <div className="flex items-center gap-1 md:gap-2 text-sm md:text-base flex-wrap justify-end">
+            {[
+              { href: '#about', label: 'Tentang' },
+              { href: '#skills', label: 'Skill' },
+              { href: '#projects', label: 'Project' },
+              { href: '#sertifikat', label: 'Sertifikat' },
+              { href: '#contact', label: 'Kontak' },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="px-3 py-2 rounded-xl hover:bg-slate-100/80 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600"
+                style={{ scrollMarginTop: 80 }}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-white blur-2xl" />
+          <div className="absolute top-24 -right-24 h-72 w-72 rounded-full bg-white blur-2xl" />
+        </div>
+
+        <div className="relative max-w-6xl mx-auto px-6 py-16 md:py-24 text-center">
+          <img
+            src="https://cdn.phototourl.com/free/2026-05-27-df58d4bb-8853-4d77-bde2-3b9c083fe741.jpg"
+            alt="Foto Muhammad Hafizh Ramadhan"
+            className="w-28 h-28 md:w-40 md:h-40 rounded-full mx-auto border-4 border-white shadow-xl mb-5 object-cover"
+          />
+
+          <h2 className="text-3xl md:text-5xl font-bold mb-3 tracking-tight">
+            Muhammad Hafizh Ramadhan
+          </h2>
+
+          <p className="text-base md:text-lg max-w-2xl mx-auto text-white/90">
+            Mahasiswa Sistem Informasi yang berfokus pada pengembangan web dinamis,
+            analisis data, dan perancangan pengalaman pengguna (UI/UX) yang intuitif.
+          </p>
+
+          <div className="mt-8 md:mt-10 flex flex-wrap gap-3 justify-center">
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-2.5 rounded-xl transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
+              style={{ scrollMarginTop: 80 }}
+            >
+              Lihat Project
+            </a>
+            <a
+              href="#sertifikat"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-2.5 rounded-xl transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
+              style={{ scrollMarginTop: 80 }}
+            >
+              Sertifikat
+            </a>
+            <a
+              href="/CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-2.5 rounded-xl transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
+            >
+              Download CV
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="max-w-6xl mx-auto px-6 py-16 md:py-20 scroll-mt-24">
+        <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-10">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Tentang Saya</h3>
+          <p className="text-[15px] md:text-lg leading-relaxed text-slate-600">
+            Saya adalah mahasiswa Bina Sarana Informatika Jurusan Sistem Informasi dengan
+            latar belakang pendidikan Teknik Komputer dan Jaringan. Kombinasi ini membekali
+            saya dengan pemahaman kuat di bidang infrastruktur IT, jaringan, sekaligus pengembangan
+            perangkat lunak.
+            <br />
+            <br />
+            Memiliki pengalaman magang di Kementerian Pendidikan Dasar dan Menengah, saya berhasil
+            menangani troubleshooting perangkat keras, pemeliharaan jaringan, serta monitoring server
+            secara berkala. Saya adalah problem solver yang adaptif, komunikatif, dan berdedikasi
+            tinggi untuk menghasilkan produk website yang optimal serta pengolahan data yang akurat.
+          </p>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section id="skills" className="bg-white py-16 md:py-20 scroll-mt-24 border-y border-slate-200">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold">Skill</h3>
+            <p className="text-slate-600 mt-2 max-w-2xl mx-auto">
+              Keahlian saya mencakup dasar web, pengembangan dengan React, serta pengolahan data menggunakan database.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-md transition">
+              <h4 className="text-lg md:text-xl font-semibold mb-3">Frontend</h4>
+              <ul className="flex flex-wrap gap-2">
+                {['HTML', 'CSS', 'PHP', 'React'].map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1 rounded-full text-sm bg-indigo-50 text-indigo-800 border border-indigo-100"
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-md transition">
+              <h4 className="text-lg md:text-xl font-semibold mb-3">Networking & Database</h4>
+              <ul className="flex flex-wrap gap-2">
+                {['Network Addressing', 'Routing & Switching', 'Wireless Network Configuration', 'MySQL'].map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1 rounded-full text-sm bg-slate-100 text-slate-700 border border-slate-200"
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:shadow-md transition">
+              <h4 className="text-lg md:text-xl font-semibold mb-3">Tools</h4>
+              <ul className="flex flex-wrap gap-2">
+                {['GitHub', 'VS Code', 'Figma', 'Canva', ' Microsoft Office'].map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1 rounded-full text-sm bg-emerald-50 text-emerald-800 border border-emerald-100"
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section id="experience" className="max-w-6xl mx-auto px-6 py-16 md:py-20 scroll-mt-24">
+        <div className="text-center mb-10">
+          <h3 className="text-2xl md:text-3xl font-bold">Experience</h3>
+          <p className="text-slate-600 mt-2 max-w-2xl mx-auto">
+            Pengalaman kerja dan pembelajaran yang membantu saya berkembang di bidang IT Support dan jaringan komputer.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-wide text-indigo-700 font-semibold">
+                Apr 2025 — Jun 2025
+              </p>
+              <h4 className="text-2xl font-semibold">IT Support Intern</h4>
+              <p className="text-slate-600">Kementerian Pendidikan Dasar dan Menengah</p>
+            </div>
+
+            <span className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-indigo-50 text-indigo-800 border border-indigo-100 text-sm font-medium">
+              IT Support
+            </span>
+          </div>
+
+          <ul className="mt-5 list-disc list-inside text-slate-700 space-y-2">
+            <li>Menangani dan memperbaiki kerusakan perangkat keras komputer untuk mendukung operasional kerja.</li>
+            <li>Melakukan pemeliharaan dan troubleshooting jaringan internet kantor agar konektivitas tetap stabil.</li>
+            <li>Monitoring server secara rutin untuk menjaga performa, keamanan, dan kestabilan sistem.</li>
+            <li>Memberikan bantuan teknis kepada pengguna secara cepat dan komunikatif.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Sertifikat */}
+      <section id="sertifikat" className="bg-white py-16 md:py-20 scroll-mt-24 border-y border-slate-200">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold">Sertifikat</h3>
+            <p className="text-slate-600 mt-2 max-w-2xl mx-auto">
+              Sertifikasi dan pengalaman praktik yang mendukung kemampuan saya di bidang IT Support, jaringan komputer, dan teknologi informasi.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:shadow-md transition">
+              <h4 className="text-xl md:text-2xl font-semibold mb-2">
+                Sertifikat Kompetensi Junior Network Administrator
+              </h4>
+
+              {/* PDF preview */}
+              <div className="mt-4">
+                <div className="flex items-center justify-between gap-3 mb-3">
+                  <span className="text-sm font-medium text-slate-700">
+                    Preview sertifikat (PDF)
+                  </span>
+                  <a
+                    href="sertifikat/sertifikat-cisco.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm font-medium text-indigo-700 hover:text-indigo-800 underline"
+                  >
+                    Buka PDF
+                  </a>
+                </div>
+                <div className="w-full rounded-2xl overflow-hidden border border-slate-200 bg-white">
+                  <iframe
+                    title="Sertifikat Cisco"
+                    src="sertifikat/sertifikat-cisco.pdf"
+                    className="w-full h-72 md:h-80"
+                  />
+                </div>
+              </div>
+
+              <p className="text-slate-600 mt-4">Badan Nasional Sertifikasi Profesi (BNSP)</p>
+              <p className="text-slate-600">Lembaga Sertifikasi Profesi Teknologi Digital</p>
+              <p className="text-slate-600">Masa Berlaku Sertifikat : 2025 - 2028</p>
+
+              <div className="flex flex-wrap gap-2 mt-4">
+                {[
+                  { t: 'Networking', cls: 'bg-indigo-50 text-indigo-800 border-indigo-100' },
+                  { t: 'Cisco', cls: 'bg-slate-100 text-slate-700 border-slate-200' },
+                  { t: 'Network Administrator', cls: 'bg-emerald-50 text-emerald-800 border-emerald-100' },
+                ].map((x) => (
+                  <span
+                    key={x.t}
+                    className={`inline-block px-3 py-1 rounded-full text-sm font-medium border ${x.cls}`}
+                  >
+                    {x.t}
+                  </span>
+                ))}
+              </div>
+
+              <p className="text-slate-600 mt-4">
+                Memiliki kompetensi di bidang administrasi jaringan dasar, konfigurasi jaringan,
+                troubleshooting konektivitas, dan pemeliharaan jaringan komputer.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:shadow-md transition">
+              <h4 className="text-xl md:text-2xl font-semibold mb-2">Sertifikat Praktik Kerja Lapangan (PKL)</h4>
+
+              {/* PDF preview */}
+              <div className="mt-4">
+                <div className="flex items-center justify-between gap-3 mb-3">
+                  <span className="text-sm font-medium text-slate-700">
+                    Preview sertifikat (PDF)
+                  </span>
+                  <a
+                    href="sertifikat/sertifikat-pkl.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm font-medium text-indigo-700 hover:text-indigo-800 underline"
+                  >
+                    Buka PDF
+                  </a>
+                </div>
+                <div className="w-full rounded-2xl overflow-hidden border border-slate-200 bg-white">
+                  <iframe
+                    title="Sertifikat PKL"
+                    src="sertifikat/sertifikat-pkl.pdf"
+                    className="w-full h-72 md:h-80"
+                  />
+                </div>
+              </div>
+              <p className="text-slate-600">Kementerian Pendidikan Dasar dan Menengah</p>
+              <p className="text-slate-600">Bagian Umum Inspektorat Jenderal</p>
+              <p className="text-slate-600 mt-2">Periode: April 2025 – Juni 2025</p>
+
+              <div className="flex flex-wrap gap-2 mt-4">
+                {[
+                  { t: 'IT Support', cls: 'bg-indigo-50 text-indigo-800 border-indigo-100' },
+                  { t: 'Maintenance', cls: 'bg-slate-100 text-slate-700 border-slate-200' },
+                  { t: 'Networking', cls: 'bg-emerald-50 text-emerald-800 border-emerald-100' },
+                ].map((x) => (
+                  <span
+                    key={x.t}
+                    className={`inline-block px-3 py-1 rounded-full text-sm font-medium border ${x.cls}`}
+                  >
+                    {x.t}
+                  </span>
+                ))}
+              </div>
+
+              <p className="text-slate-600 mt-4">
+                Melaksanakan praktik kerja lapangan di lingkungan Kementerian Pendidikan Dasar dan Menengah
+                dengan fokus pada troubleshooting perangkat, pemeliharaan jaringan, dan monitoring server.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="max-w-6xl mx-auto px-6 py-16 md:py-20 scroll-mt-24">
+        <div className="text-center mb-10">
+          <h3 className="text-2xl md:text-3xl font-bold">Project</h3>
+          <p className="text-slate-600 mt-2 max-w-2xl mx-auto">
+            Beberapa karya yang pernah saya kerjakan—mulai dari halaman statis hingga sistem berbasis data.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+          <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <img
+              src="https://via.placeholder.com/600x300?text=Website+Quiz+Programming"
+              alt="Tampilan Website Quiz Programming"
+              className="w-full h-48 md:h-56 object-cover"
+            />
+            <div className="p-6">
+              <h4 className="text-xl md:text-2xl font-semibold mb-2">Website Input Data Mahasiswa</h4>
+              <p className="text-slate-600 mb-4">
+                Website Input Data Mahasiswa berbasis HTML dan CSS yang dibuat untuk mata kuliah Web Programming.
+              </p>
+              <a
+                href="https://github.com/HFZ-AJA/MUHAMMAD_HAFIZH_RAMADHAN_19251193_19.2A.12_QUIZ.git"
+                target="_blank"
+                className="inline-flex items-center justify-center bg-indigo-600 text-white px-5 py-2.5 rounded-xl hover:bg-indigo-700 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600"
+              >
+                Lihat Project
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <img
+              src="https://via.placeholder.com/600x300"
+              alt="Project"
+              className="w-full h-48 md:h-56 object-cover"
+            />
+            <div className="p-6">
+              <h4 className="text-xl md:text-2xl font-semibold mb-2">Sistem Data Mahasiswa</h4>
+              <p className="text-slate-600 mb-4">
+                Project sederhana menggunakan database MySQL untuk mengelola data mahasiswa.
+              </p>
+
+              <div className="flex flex-wrap gap-2 items-center mb-3">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-50 text-indigo-800 border border-indigo-100">
+                  Dalam Pengembangan
+                </span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-100 text-slate-700 border border-slate-200">
+                  MySQL
+                </span>
+              </div>
+
+              <p className="text-slate-600">
+                Saat ini sedang disiapkan fitur CRUD (Create-Read-Update-Delete) dan halaman manajemen data.
+                Versi demo akan saya update setelah integrasi selesai.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="bg-indigo-700 text-white py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Kontak</h3>
+          <p className="text-base md:text-lg mb-8 text-white/90">
+            Tertarik bekerja sama atau ingin mengenal saya lebih lanjut?
+          </p>
+
+          <div className="space-y-2 text-[15px] md:text-lg">
+            <p>
+              Email:{' '}
+              <a className="underline hover:text-white/90" href="mailto:mhafizhr22@gmail.com">
+                mhafizhr22@gmail.com
+              </a>
+            </p>
+            <p>
+              GitHub:{' '}
+              <a
+                className="underline hover:text-white/90"
+                href="https://github.com/HFZ-AJA"
+                target="_blank"
+                rel="noreferrer"
+              >
+                github.com/HFZ-AJA
+              </a>
+            </p>
+            <p>
+              Instagram:{' '}
+              <a
+                className="underline hover:text-white/90"
+                href="https://instagram.com/usernamekamu"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @usernamekamu
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-slate-300 text-center py-6">
+        <p>© 2026 Muhammad Hafizh Ramadhan. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
