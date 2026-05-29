@@ -1,16 +1,60 @@
-# React + Vite
+# 🌐 My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Selamat datang di website portfolio pribadi saya 🚀
 
-Currently, two official plugins are available:
+🔗 Live Demo:
+https://hfz-aja.github.io/my_profile/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👨‍💻 Tentang Saya
 
-## React Compiler
+Halo! Saya **Hafiz Ramadhan**, seorang mahasiswa yang tertarik pada bidang:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Web Development
+- UI/UX Design
+- Front-End Development
+- Data Science & Machine Learning
 
-## Expanding the ESLint configuration
+Saya suka membuat tampilan website yang modern, responsif, dan mudah digunakan.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+Project portfolio ini dibuat menggunakan:
+
+- HTML5
+- CSS3
+- JavaScript
+- React JS
+- Vite
+- GitHub Pages
+
+---
+
+## ✨ Fitur Website
+
+- Responsive Design
+- Modern UI
+- Smooth Navigation
+- About Me Section
+- Skills Section
+- Project Showcase
+- Contact Section
+
+---
+
+## 📂 Struktur Project
+
+```bash
+my_profile/
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+├── vite.config.js
+└── README.md
